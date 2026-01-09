@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Bebasneue';
+  src: url('./assets/font/BebasNeue-Regular.ttf')  
+} 
+
+@font-face {
+    font-family: 'PTSerif';
+    src: url('./assets/font/PTSerif-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Rubik-Italic';
+    src: url('./assets/font/Rubik-Italic-VariableFont_wght.ttf')
+}
+
+@font-face {
+  font-family:'Rubik' ;
+  src: url('./assets/font/Rubik-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'NunitoSans-Italic';
+  src: url('./assets/font/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  src: url('./assets/font/NunitoSans-VariableFont_wght.ttf');
+}
+
+
+@import "tailwindcss";
+
+
+@theme {
+--font-Bebas: Bebasneue, sans-serif;
+}
+
+@theme {
+--font-PTSerif: PTSerif, serif;
+}
+
+@theme {
+--font-Rubik-Italic: 'Rubik-Italic', sans-serif;
+}
+
+@theme {
+--font-Rubik: 'Rubik', sans-serif;
+} 
+
+@theme {
+--font-NunitoSans-Italic: 'NunitoSans-Italic', sans-serif;
+}
+
+@theme {
+--font-NunitoSans: 'NunitoSans', sans-serif;  
+}
+
+@layer base {
+  h1 {
+    font-family: var(--font-Bebas);
+  }
+  p {
+    font-family: var(--font-Rubik);
+  }
+}
