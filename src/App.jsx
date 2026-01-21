@@ -158,7 +158,7 @@ function App() {
           <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
         IT Staff 
       </h3>
-      <span className="text-xs font-PTSerif text-white rounded px-1 py-1">
+      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
           S3 Solutions
         </span>
       </div>
@@ -184,19 +184,11 @@ function App() {
         {/* DATE */}
         <div className="mt-3 flex justify-end">
           <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            Feb 2024 – July 2024
+            Aug 2024 - Feb 2026
           </span>
         </div>
       </div>
     </li>
-
-
-
-
-
-
-
-
 
 
 
@@ -212,12 +204,12 @@ function App() {
         hover:bg-white/10
       "
     >
-      {/* TITLE */}
+      
       <div className="flex justify-between">
           <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
         Software Developer - OJT
       </h3>
-      <span className="text-xs font-PTSerif text-white rounded px-1 py-1">
+      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
           AFP
         </span>
       </div>
@@ -243,7 +235,7 @@ function App() {
         {/* DATE */}
         <div className="mt-3 flex justify-end">
           <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            Feb 2024 – July 2024
+           Feb 2024 - July 2024
           </span>
         </div>
       </div>
@@ -289,7 +281,7 @@ function App() {
         {/* DATE */}
         <div className="mt-3 flex justify-end">
           <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            Feb 2024 – July 2024
+           July 2023 - Present
           </span>
         </div>
       </div>
@@ -318,7 +310,7 @@ function App() {
           <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
         Part-time Store Crew
       </h3>
-      <span className="text-xs font-PTSerif text-white rounded px-1 py-1">
+      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
            7/11
         </span>
       </div>
@@ -343,7 +335,7 @@ function App() {
         {/* DATE */}
         <div className="mt-3 flex justify-end">
           <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            July 2022 – Dec 2022
+            July 2022 - December 2022
           </span>
         </div>
       </div>
