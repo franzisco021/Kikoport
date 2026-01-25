@@ -12,7 +12,10 @@ import { FaCheck } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import { Button } from '@headlessui/react'
 import Educ from "./components/educ.jsx";
-
+import Asset1 from "./assets/images/Asset 1.svg";
+import Asset2 from "./assets/images/Asset 2.svg";
+import Asset3 from "./assets/images/Asset 3.svg";
+import Cert from "./components/cert.jsx";
 
 function App() {
   const email = "franzalyssermascarenhas@gmail.com";
@@ -22,6 +25,7 @@ function App() {
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
   const [openEduc, setOpenEduc] = useState(false);
+  const  [openCert, setOpenCert] = useState(false);
 
 
   const handleCopy = async () => {
@@ -116,8 +120,8 @@ function App() {
           </div>
         </div>
 
-        <div className="flex-1">
-          <div className="grid grid-cols-12 gap-3 py-1 auto-rows-min">
+        <div className="flex flex-row items-start gap-4">
+          <div className="grid grid-cols-8 gap-3 py-1 auto-rows-min">
 
             {/* ABOUT */}
             <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
@@ -134,215 +138,7 @@ function App() {
               </p>
             </div>
             {/* SKILLS */}
-            <div className="col-span-4 row-span-4 rounded-xl border border-white/10 bg-zinc-950 p-6">
-                     <h2 className="text-lg font-Bebas text-white tracking-widest mb-4">
-                Relevant Experience
-              </h2>
-
-              <ul className="space-y-3">
-  
-                <li
-      onClick={() => setOpen(!open)}
-      className="
-        cursor-pointer
-        rounded-lg
-        border border-white/10
-        bg-white/5
-        p-4
-        transition
-        hover:bg-white/10
-      "
-    >
-      {/* TITLE */}
-      <div className="flex justify-between">
-          <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
-        IT Staff 
-      </h3>
-      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
-          S3 Solutions
-        </span>
-      </div>
-    
-
-      {/* EXPANDABLE CONTENT */}
-      <div
-        className={`
-          overflow-hidden
-          transition-opacity
-          duration-initial
-          ease-in-out
-          ${open ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
-        `}
-      >
-        {/* DESCRIPTION */}
-        <p className="text-sm text-white/70 leading-relaxed">
-          Built and maintained web projects using React.js and Tailwind CSS,
-          handled graphic design tasks, and provided PC troubleshooting and
-          Linux-based technical support within a collaborative team environment.
-        </p>
-
-        {/* DATE */}
-        <div className="mt-3 flex justify-end">
-          <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            Aug 2024 - Feb 2026
-          </span>
-        </div>
-      </div>
-    </li>
-
-
-
-    <li
-      onClick={() => setOpen2(!open2)}
-      className="
-        cursor-pointer
-        rounded-lg
-        border border-white/10
-        bg-white/5
-        p-4
-        transition
-        hover:bg-white/10
-      "
-    >
-      
-      <div className="flex justify-between">
-          <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
-        Software Developer - OJT
-      </h3>
-      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
-          AFP
-        </span>
-      </div>
-
-      {/* EXPANDABLE CONTENT */}
-      <div
-        className={`
-          overflow-hidden
-          transition-opacity
-          duration-initial
-          ease-in-out
-          ${open2 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
-        `}
-      >
-        {/* DESCRIPTION */}
-        <p className="text-sm text-white/70 leading-relaxed">
-         A collaborative team player with strong communication and
-                    interpersonal skills, capable of developing functional
-                    desktop applications using C# and XAML within the .NET
-                    framework.
-        </p>
-
-        {/* DATE */}
-        <div className="mt-3 flex justify-end">
-          <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-           Feb 2024 - July 2024
-          </span>
-        </div>
-      </div>
-    </li>
-
-
-<li
-      onClick={() => setOpen3(!open3)}
-      className="
-        cursor-pointer
-        rounded-lg
-        border border-white/10
-        bg-white/5
-        p-4
-        transition
-        hover:bg-white/10
-      "
-    >
-      {/* TITLE */}
-     <div className="flex justify-between">
-          <h3 className="font-Bebas text-lg text-white flex  items-center justify-between">
-        Freelance Multimedia Editor
-      </h3>
-      </div>
-
-      {/* EXPANDABLE CONTENT */}
-      <div
-        className={`
-          overflow-hidden
-          transition-opacity
-          duration-initial
-          ease-in-out
-          ${open3 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
-        `}
-      >
-        {/* DESCRIPTION */}
-        <p className="text-sm text-white/70 leading-relaxed">
-          Built and maintained web projects using React.js and Tailwind CSS,
-          handled graphic design tasks, and provided PC troubleshooting and
-          Linux-based technical support within a collaborative team environment.
-        </p>
-
-        {/* DATE */}
-        <div className="mt-3 flex justify-end">
-          <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-           July 2023 - Present
-          </span>
-        </div>
-      </div>
-    </li>
-
-
-                <hr className="border-orange-600/30 my-3" />
-
-                <h2 className="text-xl font-Bebas text-white tracking-widest mb-4">
-                  Additional Experience
-                </h2>           
-<li
-      onClick={() => setOpen4(!open4)}
-      className="
-        cursor-pointer
-        rounded-lg
-        border border-white/10
-        bg-white/5
-        p-4
-        transition
-        hover:bg-white/10
-      "
-    >
-      {/* TITLE */}
-     <div className="flex justify-between">
-          <h3 className="font-Bebas text-xl text-white flex  items-center justify-between">
-        Part-time Store Crew
-      </h3>
-      <span className="text-xs font-Rubik text-white rounded px-1 py-1">
-           7/11
-        </span>
-      </div>
-
-      {/* EXPANDABLE CONTENT */}
-      <div
-        className={`
-          overflow-hidden
-          transition-opacity
-          duration-initial
-          ease-in-out
-          ${open4 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
-        `}
-      >
-        {/* DESCRIPTION */}
-        <p className="text-sm text-white/70 leading-relaxed">
-          Built and maintained web projects using React.js and Tailwind CSS,
-          handled graphic design tasks, and provided PC troubleshooting and
-          Linux-based technical support within a collaborative team environment.
-        </p>
-
-        {/* DATE */}
-        <div className="mt-3 flex justify-end">
-          <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
-            July 2022 - December 2022
-          </span>
-        </div>
-      </div>
-    </li>
-                
-              </ul>
-            </div>
+               {/* end of the skills section */}
 
             {/* PROJECT / FEATURE */}
             <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
@@ -375,7 +171,307 @@ isOpen={openEduc}
                   </div>
               </div>
             </div>
-          </div>
+
+
+            <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
+              <h2 className="mb-3 text-lg uppercase tracking-widest text-white font-Bebas">
+                Certifications
+              </h2>
+              <div className="flex flex-column text-white text-sm font-Rubik gap-3.5 text-left hyphens-auto">
+               <div className="flex flex-col gap-3.5">
+  {/* Item 1 */}
+  <div className="flex flex-c items-start gap-3 pl-3">
+    <div className="flex h-5 w-8 items-center justify-center">
+      <img
+        src={Asset2}
+        alt="OSINT Training"
+        className="h-5 w-5 object-contain"
+      />
+    </div>
+
+    <div className="flex flex-col">
+      <h1 className="text-sm font-medium text-white">
+        Open Source Intelligence Training
+      </h1>
+      <span className="text-xs text-white/60">
+        Armed Forces of the Philippines · March 2024
+      </span>
+    </div>
+  </div>
+
+  {/* Item 2 */}
+  <div className="flex items-start gap-3 pl-3">
+    <div className="flex h-5 w-8 items-center justify-center">
+      <img
+        src={Asset1}
+        alt="Introduction to Cybersecurity"
+        className="h-5 w-5 object-contain"
+      />
+    </div>
+
+    <div className="flex flex-col">
+      <h1 className="text-sm font-medium text-white">
+        Introduction to Cybersecurity
+      </h1>
+      <span className="text-xs text-white/60">
+        CISCO Networking Academy · July 2024
+      </span>
+    </div>
+  </div>
+
+  {/* Item 3 */}
+  <div className="flex items-start gap-3 pl-3">
+    <div className="flex h-5 w-8 items-center justify-center">
+      <img
+        src={Asset3}
+        alt="Civil Service Professional Eligibility"
+        className="h-5 w-5 object-contain"
+      />
+    </div>
+
+    <div className="flex flex-col">
+      <h1 className="text-sm font-medium text-white">
+        Civil Service Professional Eligibility
+      </h1>
+      <span className="text-xs text-white/60">
+        Civil Service Commission ·June 2025
+      </span>
+    </div>
+  </div>
+</div>
+
+                  <div className="flex items-end ml-auto">
+                    
+                    
+                    <FaAngleRight
+  onClick={() => setOpenCert(true)}
+  className="cursor-pointer hover:scale-110 transition"
+
+  
+/>
+
+<Cert
+isOpen={openCert}
+ onClose={() => setOpenCert(false)}
+        title="Certification"/>
+
+                  </div>
+              </div>
+            </div>
+          </div>{/*  this is the end of grid */}
+
+<div className=" flex justify-center my-10"></div>
+<div className="w-[760px] rounded-xl border border-white/10 bg-zinc-950 p-6">
+                     <h2 className="text-sm font-Bebas text-white tracking-widest mb-4">
+                Relevant Experience
+              </h2>
+
+              <ul className="space-y-3">
+  
+                <li
+      onClick={() => setOpen(!open)}
+      className="
+        cursor-pointer
+        rounded-lg
+        border border-white/10
+        bg-white/5
+        p-4
+        transition
+        hover:bg-white/10
+      "
+    >
+      {/* TITLE */}
+      <div className="flex justify-between">
+          <h3 className="font-Bebas text-sm text-white flex  items-center justify-between">
+        IT Staff 
+      </h3>
+      <span className="text-xs font-Rubik text-white/70 rounded px-1 py-1">
+          S3 Solutions
+        </span>
+      </div>
+    
+
+      {/* EXPANDABLE CONTENT */}
+      <div
+        className={`
+          overflow-hidden
+          transition-opacity
+          duration-initial
+          ease-in-out
+          ${open ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
+        `}
+      >
+        {/* DESCRIPTION */}
+        <p className="text-xs text-white/70 leading-relaxed">
+          Built and maintained web projects using React.js and Tailwind CSS,
+          handled graphic design tasks, and provided PC troubleshooting and
+          Linux-based technical support within a collaborative team environment.
+        </p>
+
+        {/* DATE */}
+        <div className="mt-3 flex justify-end">
+          <span className="rounded bg-stone-600 px-3 py-1 text-xs font-NunitoSans text-white">
+            Aug 2024 - Feb 2026
+          </span>
+        </div>
+      </div>
+    </li>
+
+
+
+    <li
+      onClick={() => setOpen2(!open2)}
+      className="
+        cursor-pointer
+        rounded-lg
+        border border-white/10
+        bg-white/5
+        p-4
+        transition
+        hover:bg-white/10
+      "
+    >
+      
+      <div className="flex justify-between">
+          <h3 className="font-Bebas text-sm text-white flex  items-center justify-between">
+        Software Developer - OJT
+      </h3>
+      <span className="text-xs font-Rubik text-white/70 rounded px-1 py-1">
+          AFP
+        </span>
+      </div>
+
+      {/* EXPANDABLE CONTENT */}
+      <div
+        className={`
+          overflow-hidden
+          transition-opacity
+          duration-initial
+          ease-in-out
+          ${open2 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
+        `}
+      >
+        {/* DESCRIPTION */}
+        <p className="text-xs text-white/70 leading-relaxed">
+         A collaborative team player with strong communication and
+                    interpersonal skills, capable of developing functional
+                    desktop applications using C# and XAML within the .NET
+                    framework.
+        </p>
+
+        {/* DATE */}
+        <div className="mt-3 flex justify-end">
+          <span className="rounded bg-stone-600 px-3 py-1 text-xs font-NunitoSans text-white">
+           Feb 2024 - July 2024
+          </span>
+        </div>
+      </div>
+    </li>
+
+
+<li
+      onClick={() => setOpen3(!open3)}
+      className="
+        cursor-pointer
+        rounded-lg
+        border border-white/10
+        bg-white/5
+        p-4
+        transition
+        hover:bg-white/10
+      "
+    >
+      {/* TITLE */}
+     <div className="flex justify-between">
+          <h3 className="font-Bebas text-sm text-white flex  items-center justify-between">
+        Freelance Multimedia Editor
+      </h3>
+      </div>
+
+      {/* EXPANDABLE CONTENT */}
+      <div
+        className={`
+          overflow-hidden
+          transition-opacity
+          duration-initial
+          ease-in-out
+          ${open3 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
+        `}
+      >
+        {/* DESCRIPTION */}
+        <p className="text-xs text-white/70 leading-relaxed">
+         Experienced in creating high-quality visual content, including photo and 
+         video production, efficient post-editing, and realistic apparel mockups for 
+         branding, promotion, and digital presentation.
+        </p>
+
+        {/* DATE */}
+        <div className="mt-3 flex justify-end">
+          <span className="rounded bg-stone-600 px-3 py-1 text-sm font-NunitoSans text-white">
+           July 2023 - Present
+          </span>
+        </div>
+      </div>
+    </li>
+
+
+                <hr className="border-orange-600/30 my-3" />
+
+                <h2 className="text-xl font-Bebas text-white tracking-widest mb-4">
+                  Additional Experience
+                </h2>           
+<li
+      onClick={() => setOpen4(!open4)}
+      className="
+        cursor-pointer
+        rounded-lg
+        border border-white/10
+        bg-white/5
+        p-4
+        transition
+        hover:bg-white/10
+      "
+    >
+      {/* TITLE */}
+     <div className="flex justify-between">
+          <h3 className="font-Bebas text-sm text-white flex  items-center justify-between">
+        Part-time Store Crew
+      </h3>
+      <span className="text-xs font-Rubik text-white/70 rounded px-1 py-1">
+           7/11
+        </span>
+      </div>
+
+      {/* EXPANDABLE CONTENT */}
+      <div
+        className={`
+          overflow-hidden
+          transition-opacity
+          duration-initial
+          ease-in-out
+          ${open4 ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"}
+        `}
+      >
+        {/* DESCRIPTION */}
+        <p className="text-xs text-white/70 leading-relaxed">
+          Customer-focused retail associate with experience in point-of-sale 
+          operations, food equipment maintenance, and efficient workflow management 
+          in a fast-paced environment.
+        </p>
+
+        {/* DATE */}
+        <div className="mt-3 flex justify-end">
+          <span className="rounded bg-stone-600 px-3 py-1 text-xs font-NunitoSans text-white">
+            July 2022 - December 2022
+          </span>
+        </div>
+      </div>
+    </li>
+                
+              </ul>
+             </div>
+
+
         </div>
       </div>
     </div>

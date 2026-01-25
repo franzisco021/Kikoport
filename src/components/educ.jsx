@@ -24,20 +24,20 @@ const Educ = ({ isOpen, onClose, title }) => {
 
         {/* Content Card */}
         <div className="rounded-xl border border-white/10 bg-zinc-900/60 p-6">
-          {/* Degree */}
+        
           <h3 className="text-lg font-semibold text-white">
             Bachelor of Science in Information Technology
           </h3>
 
-          {/* School */}
+      
           <p className="mt-1 text-sm text-white/60">
             First City Providential College · 2020 – 2024
           </p>
 
-          {/* Divider */}
+    
           <div className="my-5 h-px bg-white/10" />
 
-          {/* Coursework */}
+         
           <p className="mb-3 text-xs uppercase tracking-widest text-white/50">
             Relevant Coursework
           </p>
@@ -49,9 +49,9 @@ const Educ = ({ isOpen, onClose, title }) => {
             <li>Mobile App Development</li>
           </ul>
 
-          {/* Images */}
+         
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Main Image */}
+         
             <div className="overflow-hidden rounded-xl border border-white/10">
               <img
                 src={college1}
@@ -60,7 +60,6 @@ const Educ = ({ isOpen, onClose, title }) => {
               />
             </div>
 
-            {/* Secondary Image */}
             <div className="overflow-hidden rounded-xl border border-white/10">
               <img
                 src={college2}
