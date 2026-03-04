@@ -31,6 +31,24 @@ function App() {
     await navigator.clipboard.writeText(email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+
+    const skillSections = [
+      {
+        title: "Web Development",
+        color: "blue",
+        skills: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
+      },
+      {
+        title: "Graphic Design & UI/UX",
+        color: "purple",
+        skills: ["Photoshop", "Illustrator", "Figma", "Premiere Pro", "CapCut"],
+      },
+      {
+        title: "Productivity Tools",
+        color: "emerald",
+        skills: ["Microsoft Word", "Microsoft Excel"],
+      },
+    ];
   };
   return (
     <div className="w-full bg-neutral-950  min-h-screen">
@@ -127,11 +145,22 @@ function App() {
               </h2>
 
               <p className="text-white text-sm font-Rubik  text-left hyphens-auto">
-                An individual who’s never fail to fulfill a task before the
-                deadline and aims to learn more about the corporate world, gain
-                experience and more knowledge. In return, I offer my knowledge
-                on customer service, my creativity. And I’m an individual that
-                value punctuality and accuracy.
+                A dedicated and detail-oriented IT graduate who consistently
+                meets deadlines and values punctuality and accuracy. I am eager
+                to grow in the corporate environment while applying my technical
+                and creative skills. I bring strong teamwork to collaborate
+                effectively with colleagues, adaptability to quickly adjust to
+                new tasks, and problem-solving to tackle challenges efficiently.
+                <br />
+                <br/>
+                My technical skills include web development (building websites
+                and web apps with HTML, CSS, JavaScript, and React), UI/UX
+                design (creating user-friendly digital experiences), graphic
+                design (visuals and posters using Photoshop and Illustrator),
+                and video editing (using Premiere Pro and CapCut). I am also
+                proficient in productivity tools such as Microsoft Word and
+                Excel, combining technical knowledge with professional
+                communication and reliability.
               </p>
             </div>
             {/* SKILLS */}
@@ -254,6 +283,67 @@ function App() {
                   />
                 </div>
               </div>
+            </div>
+
+            <div className="col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* LEFT CARD */}
+              <div className="rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300">
+                <h2 className="mb-3 text-lg uppercase tracking-widest text-white font-Bebas">
+                  Soft Skills
+                </h2>
+
+                <div className="flex flex-wrap gap-2 text-[12px] font-Rubik leading-none">
+                  {[
+                    "Team Player",
+                    "Adaptable",
+                    "Resilient",
+                    "Strong Work Ethic",
+                    "Time Management",
+                  ].map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-2.5 py-0.5 rounded-full bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 transition-all duration-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/* RIGHT CARD */}
+              <div className="flex flex-col justify-between rounded-xl border border-white/10 bg-zinc-950 p-6">
+                <div>
+                  <div className="flex items-start justify-between mb-4">
+                    <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                      Technical Skills
+                    </h2>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 text-[12px] font-Rubik leading-none">
+                  {[
+                    "Photoshop", "Illustrator", "Figma", "Premiere Pro", "CapCut","Microsoft Word", "Microsoft Excel", "Microsoft Powerpoint", "React", "HTML", "CSS", "JS"
+                  ].map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-2.5 py-0.5 rounded-full bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 transition-all duration-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 text-[12px] font-Rubik leading-none"></div>
+
+                  <div className="flex flex-col gap-4 text-sm font-Rubik">
+                    {/* Duplicate same items here */}
+                  </div>
+                </div>
+              </div>
+
+              <Cert
+                isOpen={openCert}
+                onClose={() => setOpenCert(false)}
+                title="Certification"
+              />
             </div>
           </div>
           {/*  this is the end of grid */}
