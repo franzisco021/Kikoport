@@ -16,6 +16,8 @@ import Asset1 from "./assets/images/Asset 1.svg";
 import Asset2 from "./assets/images/Asset 2.svg";
 import Asset3 from "./assets/images/Asset 3.svg";
 import Cert from "./components/cert.jsx";
+import Kikoologo from "./assets/images/kikoologo.png";
+import Logo from "./assets/images/Logo.png"
 
 function App() {
   const email = "franzalyssermascarenhas@gmail.com";
@@ -152,7 +154,7 @@ function App() {
                 effectively with colleagues, adaptability to quickly adjust to
                 new tasks, and problem-solving to tackle challenges efficiently.
                 <br />
-                <br/>
+                <br />
                 My technical skills include web development (building websites
                 and web apps with HTML, CSS, JavaScript, and React), UI/UX
                 design (creating user-friendly digital experiences), graphic
@@ -319,18 +321,29 @@ function App() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 text-[12px] font-Rubik leading-none">
-                  {[
-                    "Photoshop", "Illustrator", "Figma", "Premiere Pro", "CapCut","Microsoft Word", "Microsoft Excel", "Microsoft Powerpoint", "React", "HTML", "CSS", "JS"
-                  ].map((skill, index) => (
-                    <span
-                      key={index}
-                      className="px-2.5 py-0.5 rounded-full bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 transition-all duration-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                    {[
+                      "Photoshop",
+                      "Illustrator",
+                      "Figma",
+                      "Premiere Pro",
+                      "CapCut",
+                      "Microsoft Word",
+                      "Microsoft Excel",
+                      "Microsoft Powerpoint",
+                      "React",
+                      "HTML",
+                      "CSS",
+                      "JS",
+                    ].map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-2.5 py-0.5 rounded-full bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 transition-all duration-200"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 text-[12px] font-Rubik leading-none"></div>
 
                   <div className="flex flex-col gap-4 text-sm font-Rubik">
@@ -501,7 +514,7 @@ function App() {
 
               <hr className="border-orange-600/30 my-3" />
 
-              <h2 className="text-xl font-Bebas text-white tracking-widest mb-4">
+              <h2 className="text-sm font-Bebas text-white tracking-widest mb-4">
                 Additional Experience
               </h2>
               <li
@@ -554,7 +567,96 @@ function App() {
             </ul>
           </div>
         </div>
+
+        <hr className="border-orange-600/30 my-3" />
+
+        <div className="gap-4 pt-1">
+          <div className="grid grid-cols-8 grid-rows-[repeat(8,5fr)] gap-3 py-1 w-full h-96">
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl ">
+                <img
+                  src={Kikoologo}
+                  alt="Kikoo Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                
+              </div>
+
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="Kikoologo"
+                  alt="Kikoo Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="Kikoologo"
+                  alt="Project Image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="your-image-url.jpg"
+                  alt="Project Image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <footer className="bg-neutral-800 h-12 "></footer>
     </div>
   );
 }
