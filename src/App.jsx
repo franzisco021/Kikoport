@@ -11,13 +11,15 @@ import { FaCopy } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import { Button } from "@headlessui/react";
-import Educ from "./components/educ.jsx";
 import Asset1 from "./assets/images/Asset 1.svg";
 import Asset2 from "./assets/images/Asset 2.svg";
 import Asset3 from "./assets/images/Asset 3.svg";
-import Cert from "./components/cert.jsx";
 import Kikoologo from "./assets/images/kikoologo.png";
-import Logo from "./assets/images/Logo.png"
+import Logo from "./assets/images/Logo.png";
+
+import Educ from "./components/educ.jsx";
+import Cert from "./components/cert.jsx";
+import PersonalProj from "./components/personalproj.jsx";
 
 function App() {
   const email = "franzalyssermascarenhas@gmail.com";
@@ -28,6 +30,7 @@ function App() {
   const [open4, setOpen4] = useState(false);
   const [openEduc, setOpenEduc] = useState(false);
   const [openCert, setOpenCert] = useState(false);
+  const [openPersonalproj, setPersonalproj] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(email);
@@ -138,8 +141,8 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-row items-start gap-4">
-          <div className="grid grid-cols-8 gap-3 py-1 auto-rows-min">
+        <div className="flex flex-row items-start gap-1">
+          <div className="grid grid-cols-8 gap-3 auto-rows-min">
             {/* ABOUT */}
             <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
               <h2 className="mb-1 text-lg uppercase tracking-widest text-white font-Bebas">
@@ -588,10 +591,16 @@ function App() {
                   Personal Branding Project
                 </h2>
 
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
-                
+                <FaAngleRight onClick={() => setPersonalproj(true) }
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
 
+                  <PersonalProj
+                    isOpen={openPersonalproj}
+                    onClose={() => setPersonalproj(false)}
+                    title="Personal Project"
+              />
+ 
             </div>
 
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
