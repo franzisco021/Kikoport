@@ -17,7 +17,6 @@ const personalProject = ({ isOpen, onClose, title }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
       <div className="relative w-full max-w-5xl max-h-[90vh] rounded-2xl overflow-y-auto bg-neutral-950 border border-white/10 shadow-2xl scroll-smooth">
-
         {/* Sticky Header */}
         <div className="sticky top-0 z-30 bg-neutral-950/95 backdrop-blur-md flex justify-between items-center px-5 py-5 border-b border-white/10">
           <h2 className="text-4xl font-Bebas tracking-widest text-white">
@@ -32,7 +31,6 @@ const personalProject = ({ isOpen, onClose, title }) => {
 
         {/* Content */}
         <div className="p-2 flex flex-col items-center">
-
           {/* Offer Image */}
           <div className="w-full max-w-5xl text-white pb-5">
             <img
@@ -61,19 +59,19 @@ const personalProject = ({ isOpen, onClose, title }) => {
             <img
               src={info1}
               alt="info1"
-              className="w-full h-96 md:h-[500px] object-cover"
+              className="w-full h-96 md:h-125 object-cover"
             />
 
             <img
               src={info2}
               alt="info2"
-              className="w-full h-96 md:h-[500px] object-cover"
+              className="w-full h-96 md:h-125 object-cover"
             />
 
             <img
               src={info3}
               alt="info3"
-              className="w-full h-96 md:h-[500px] object-cover"
+              className="w-full h-96 md:h-125 object-cover"
             />
           </div>
 
@@ -87,27 +85,27 @@ const personalProject = ({ isOpen, onClose, title }) => {
               <img
                 src={service1}
                 alt="service1"
-                className="w-full h-96 md:h-[500px] object-cover"
+                className="w-full h-96 md:h-125 object-cover"
               />
               <img
                 src={service2}
                 alt="service2"
-                className="w-full h-96 md:h-[500px] object-cover"
+                className="w-full h-96 md:h-125 object-cover"
               />
               <img
                 src={service3}
                 alt="service3"
-                className="w-full h-96 md:h-[500px] object-cover"
+                className="w-full h-96 md:h-125 object-cover"
               />
               <img
                 src={service4}
                 alt="service4"
-                className="w-full h-96 md:h-[500px] object-cover"
+                className="w-full h-96 md:h-125 object-cover"
               />
               <img
                 src={service5}
                 alt="service5"
-                className="w-full h-96 md:h-[500px] object-cover"
+                className="w-full h-96 md:h-125 object-cover"
               />
             </div>
           </div>
@@ -117,10 +115,9 @@ const personalProject = ({ isOpen, onClose, title }) => {
             <img
               src={mask}
               alt="mask"
-              className="w-full h-96 md:h-[500px] object-cover rounded-2xl"
+              className="w-full h-96 md:h-125 object-cover rounded-2xl"
             />
           </div>
-
         </div>
       </div>
     </div>

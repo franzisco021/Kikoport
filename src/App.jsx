@@ -15,11 +15,13 @@ import Asset1 from "./assets/images/Asset 1.svg";
 import Asset2 from "./assets/images/Asset 2.svg";
 import Asset3 from "./assets/images/Asset 3.svg";
 import Kikoologo from "./assets/images/kikoologo.png";
+import OrgPic from "./assets/images/New folder/ORG/5.jpg";
 import Logo from "./assets/images/Logo.png";
 
 import Educ from "./components/educ.jsx";
 import Cert from "./components/cert.jsx";
 import PersonalProj from "./components/personalproj.jsx";
+import Schoolorg from "./components/schoolorg.jsx";
 
 function App() {
   const email = "franzalyssermascarenhas@gmail.com";
@@ -31,6 +33,7 @@ function App() {
   const [openEduc, setOpenEduc] = useState(false);
   const [openCert, setOpenCert] = useState(false);
   const [openPersonalproj, setPersonalproj] = useState(false);
+  const [openSchoolorg, setSchoolorg] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(email);
@@ -52,6 +55,19 @@ function App() {
         title: "Productivity Tools",
         color: "emerald",
         skills: ["Microsoft Word", "Microsoft Excel"],
+      },
+    ];
+
+    const projects = [
+      {
+        title: "Personal Project",
+        image: Kikoologo,
+        component: PersonalProj,
+      },
+      {
+        title: "Web Development",
+        image: "blue",
+        component: PersonalProj,
       },
     ];
   };
@@ -574,9 +590,11 @@ function App() {
         <hr className="border-orange-600/30 my-3" />
 
         <div className="gap-4 pt-1">
-          <div className="grid grid-cols-8 grid-rows-[repeat(8,5fr)] gap-3 py-1 w-full h-96">
+          <div className="flex flex-row justify-center-safe text-5xl text-white pb-5 h-16 opacity-35">
+            <h1>My Projects </h1>
+          </div>
+          <div className="grid grid-cols-8 auto-rows-auto gap-3 py-1 w-full h-full">
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
-              {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl ">
                 <img
                   src={Kikoologo}
@@ -591,16 +609,86 @@ function App() {
                   Personal Branding Project
                 </h2>
 
-                <FaAngleRight onClick={() => setPersonalproj(true) }
-                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setPersonalproj(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300"
+                />
               </div>
 
-                  <PersonalProj
-                    isOpen={openPersonalproj}
-                    onClose={() => setPersonalproj(false)}
-                    title="Personal Project"
+              <PersonalProj
+                isOpen={openPersonalproj}
+                onClose={() => setPersonalproj(false)}
+                title="Personal Project"
               />
- 
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src={OrgPic}
+                  alt="ORGPIC"
+                  className="w-full h-full object-cover opacity-20"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  School Organization
+                </h2>
+
+                <FaAngleRight
+                  onClick={() => setSchoolorg(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+
+              <Schoolorg
+                isOpen={openSchoolorg}
+                onClose={() => setSchoolorg(false)}
+                title="School Organization"
+              />
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="Kikoologo"
+                  alt="Project Image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project 2
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="your-image-url.jpg"
+                  alt="Project Image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
             </div>
 
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
@@ -628,7 +716,7 @@ function App() {
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
                   src="Kikoologo"
-                  alt="Project Image"
+                  alt="Kikoo Logo"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -647,8 +735,27 @@ function App() {
               {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
-                  src="your-image-url.jpg"
-                  alt="Project Image"
+                  src="Kikoologo"
+                  alt="Kikoo Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Personal Branding Project
+                </h2>
+
+                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src="Kikoologo"
+                  alt="Kikoo Logo"
                   className="w-full h-full object-cover"
                 />
               </div>
