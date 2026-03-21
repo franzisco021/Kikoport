@@ -17,11 +17,21 @@ import Asset3 from "./assets/images/Asset 3.svg";
 import Kikoologo from "./assets/images/kikoologo.png";
 import OrgPic from "./assets/images/New folder/ORG/5.jpg";
 import Logo from "./assets/images/Logo.png";
+import MarlinsCover from "./assets/images/New folder/MARLINS/marlinscover.jpg";
+import BasCover from "./assets/images/New folder/NBA/cover.png";
+import EcoCover from "./assets/images/New folder/ECOGLOW/cover.png";
 
+import Cover from "./assets/images/New folder/OSOURCE/cover.jpg";
 import Educ from "./components/educ.jsx";
 import Cert from "./components/cert.jsx";
 import PersonalProj from "./components/personalproj.jsx";
 import Schoolorg from "./components/schoolorg.jsx";
+import Osource from "./components/osrouce.jsx";
+import Marlins from "./components/marlins.jsx"; 
+import Basketball from "./components/basketball.jsx";
+import Ecoglow from "./components/ecoglow.jsx";
+import Compe from "./components/compe.jsx";
+import Photog from "./components/photog.jsx";
 
 function App() {
   const email = "franzalyssermascarenhas@gmail.com";
@@ -34,6 +44,12 @@ function App() {
   const [openCert, setOpenCert] = useState(false);
   const [openPersonalproj, setPersonalproj] = useState(false);
   const [openSchoolorg, setSchoolorg] = useState(false);
+  const [openOsource, setOsource] = useState(false);
+  const [openMarlins, setMarlins] = useState(false);
+  const [openBasketball, setBasketball] = useState(false);
+  const [openEcoglow, setEcoglow] = useState(false);
+  const [openCompe, setCompe] = useState(false);
+  const [openPhotog, setphotog] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(email);
@@ -58,18 +74,7 @@ function App() {
       },
     ];
 
-    const projects = [
-      {
-        title: "Personal Project",
-        image: Kikoologo,
-        component: PersonalProj,
-      },
-      {
-        title: "Web Development",
-        image: "blue",
-        component: PersonalProj,
-      },
-    ];
+
   };
   return (
     <div className="w-full bg-neutral-950  min-h-screen">
@@ -135,11 +140,10 @@ function App() {
     inline-flex items-center justify-center gap-2 text-lg ml-1 font-NunitoSans
     min-w-[9.5rem] min-h-[2.5rem] rounded-md border
     transition-colors duration-300 ease-in-out
-    ${
-      copied
-        ? "bg-green-200 border-green-200 text-stone-950"
-        : "bg-white border-white/50 text-stone-950 hover:border-white"
-    }
+    ${copied
+                  ? "bg-green-200 border-green-200 text-stone-950"
+                  : "bg-white border-white/50 text-stone-950 hover:border-white"
+                }
   `}
             >
               {copied ? (
@@ -149,7 +153,7 @@ function App() {
                 </>
               ) : (
                 <>
-                  <FaCopy className="text-base" />
+                  <FaCopy className="text-base font-rubik" />
                   <span>Copy Email</span>
                 </>
               )}
@@ -606,7 +610,7 @@ function App() {
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
+                  Personal Branding Project 
                 </h2>
 
                 <FaAngleRight
@@ -628,7 +632,7 @@ function App() {
                 <img
                   src={OrgPic}
                   alt="ORGPIC"
-                  className="w-full h-full object-cover opacity-20"
+                  className="w-full h-full object-cover opacity-50"
                 />
               </div>
 
@@ -653,42 +657,114 @@ function App() {
 
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
               {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl opacity-70">
+                <img
+                  src={Cover}
+                  alt="CoverOsource"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  O'Source Clothing Line
+                </h2>
+
+                <FaAngleRight   onClick={() => setOsource(true)} className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+
+              <Osource
+                isOpen={openOsource}
+                onClose={() => setOsource(false)}
+                title="Original Source Clothing Line"
+              />
+
+
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
-                  src="Kikoologo"
+                  src={MarlinsCover}
                   alt="Project Image"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-50"
                 />
               </div>
 
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project 2
+                  Marlins Basketball 
                 </h2>
 
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight 
+                onClick={() => setMarlins(true)}
+                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
+              
+               <Marlins
+                isOpen={openMarlins}
+                onClose={() => setMarlins(false)}
+                title="Marlins Basketball"
+              />
             </div>
 
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
               {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
-                  src="your-image-url.jpg"
-                  alt="Project Image"
-                  className="w-full h-full object-cover"
+                  src={BasCover}
+                  alt="Basketball Cover"
+                  className="w-full h-full object-cover opacity-40 "
                 />
               </div>
 
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
+                  Basketball Project
                 </h2>
 
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight 
+                onClick={() => setBasketball(true)}
+                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
+              
+               <Basketball
+                isOpen={openBasketball}
+                onClose={() => setBasketball(false)}
+                title="Basketball Project"
+              />
+            </div>
+
+            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
+              {/* Image on top */}
+              <div className="w-full h-40 overflow-hidden rounded-2xl">
+                <img
+                  src={EcoCover}
+                  alt="Kikoo Logo"
+                  className="w-full h-full object-cover opacity-50"
+                />
+              </div>
+
+              {/* Title and arrow below */}
+              <div className="flex items-center justify-between mt-4">
+                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
+                  Ecoglow
+                </h2>
+
+                <FaAngleRight 
+                onClick={() => setEcoglow(true)}
+                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              </div>
+              
+               <Ecoglow
+                isOpen={openEcoglow}
+                onClose={() => setEcoglow(false)}
+                title="Ecoglow"
+              />
             </div>
 
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
@@ -704,51 +780,19 @@ function App() {
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
+                  Competition Entry
                 </h2>
 
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              <FaAngleRight 
+                onClick={() => setCompe(true)}
+                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-            </div>
-
-            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
-              {/* Image on top */}
-              <div className="w-full h-40 overflow-hidden rounded-2xl">
-                <img
-                  src="Kikoologo"
-                  alt="Kikoo Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Title and arrow below */}
-              <div className="flex items-center justify-between mt-4">
-                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
-                </h2>
-
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
-              </div>
-            </div>
-
-            <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
-              {/* Image on top */}
-              <div className="w-full h-40 overflow-hidden rounded-2xl">
-                <img
-                  src="Kikoologo"
-                  alt="Kikoo Logo"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Title and arrow below */}
-              <div className="flex items-center justify-between mt-4">
-                <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
-                </h2>
-
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
-              </div>
+              
+               <Compe
+                isOpen={openCompe}
+                onClose={() => setCompe(false)}
+                title="DLTK Entry"
+              />
             </div>
             <div className="col-span-4 row-span-4 rounded-2xl border border-white/10 bg-zinc-950 p-6 hover:border-white/20 transition-colors duration-300 flex flex-col overflow-hidden shadow-lg">
               {/* Image on top */}
@@ -763,11 +807,19 @@ function App() {
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project
+                  Random Photography
                 </h2>
 
-                <FaAngleRight className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+              <FaAngleRight 
+                onClick={() => setphotog(true)}
+                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
+              
+               <Photog
+                isOpen={openPhotog}
+                onClose={() => setPhotog(false)}
+                title="DLTK Entry"
+              />
             </div>
           </div>
         </div>
