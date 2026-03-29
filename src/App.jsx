@@ -20,6 +20,8 @@ import Logo from "./assets/images/Logo.png";
 import MarlinsCover from "./assets/images/New folder/MARLINS/marlinscover.jpg";
 import BasCover from "./assets/images/New folder/NBA/cover.png";
 import EcoCover from "./assets/images/New folder/ECOGLOW/cover.png";
+import Compecover from "./assets/images/New folder/DKLT design/1.png";
+import Photohcover from "./assets/images/New folder/PICTURE/9.jpg";
 
 import Cover from "./assets/images/New folder/OSOURCE/cover.jpg";
 import Educ from "./components/educ.jsx";
@@ -27,7 +29,7 @@ import Cert from "./components/cert.jsx";
 import PersonalProj from "./components/personalproj.jsx";
 import Schoolorg from "./components/schoolorg.jsx";
 import Osource from "./components/osrouce.jsx";
-import Marlins from "./components/marlins.jsx"; 
+import Marlins from "./components/marlins.jsx";
 import Basketball from "./components/basketball.jsx";
 import Ecoglow from "./components/ecoglow.jsx";
 import Compe from "./components/compe.jsx";
@@ -49,7 +51,7 @@ function App() {
   const [openBasketball, setBasketball] = useState(false);
   const [openEcoglow, setEcoglow] = useState(false);
   const [openCompe, setCompe] = useState(false);
-  const [openPhotog, setphotog] = useState(false);
+  const [openPhotog, setPhotog] = useState(false);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(email);
@@ -78,26 +80,25 @@ function App() {
   };
   return (
     <div className="w-full bg-neutral-950  min-h-screen">
-      <div className="relative px-5 w-full max-w-5xl mx-auto flex flex-col">
-        <div className="flex items-center justify-start gap-3 h-56">
+      <div className="relative px-4 sm:px-6 md:px-8 w-full max-w-6xl mx-auto flex flex-col pt-16">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:h-56 lg:h-36">
           <a>
             <img
               src={FranzPicture}
-              className="h-35 w-35 rounded-xl transition-transform duration-1000"
+              className="h-24 w-24 md:h-32 md:w-32 rounded-xl"
               alt="Author Picture"
             />
           </a>
-
-          <div className="ml-4">
-            <h1 className="text-7xl font-Bebas text-white">
+          <div className="text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-Bebas text-white">
               Franz Mascarenhas
             </h1>
-            <h3 className="text-xl font-NunitoSans text-white">
+            <h3 className="text-sm sm:text-base md:text-md text-white">
               Graphic Designer / Web Development / IT Staff
             </h3>
           </div>
 
-          <div className="ml-auto flex flex-col items-center gap-4">
+          <div className="md:ml-auto flex flex-col items-center gap-3">
             <div className="text-white flex  items-center gap-3">
               <a
                 href="https://www.behance.net/franzmascare"
@@ -161,7 +162,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex flex-row items-start gap-1">
+        <div className="flex flex-col lg:flex-row gap-4">
           <div className="grid grid-cols-8 gap-3 auto-rows-min">
             {/* ABOUT */}
             <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
@@ -188,10 +189,10 @@ function App() {
                 communication and reliability.
               </p>
             </div>
-            {/* SKILLS */}
+
             {/* end of the skills section */}
 
-            {/* PROJECT / FEATURE */}
+
             <div className="col-span-8 row-span-1 rounded-lg border border-white/10 bg-zinc-950 p-5">
               <h2 className="mb-1 text-lg uppercase tracking-widest text-white font-Bebas">
                 Educational Background
@@ -384,9 +385,9 @@ function App() {
           </div>
           {/*  this is the end of grid */}
 
-          <div className=" flex justify-center my-10"></div>
 
-          <div className="w-[760px] rounded-xl border border-white/10 bg-zinc-950 p-6">
+
+          <div className="w-full lg:w-2/3 rounded-xl border border-white/10 bg-zinc-950 p-6">
             <h2 className="text-sm font-Bebas text-white tracking-widest mb-4">
               Relevant Experience
             </h2>
@@ -594,7 +595,7 @@ function App() {
         <hr className="border-orange-600/30 my-3" />
 
         <div className="gap-4 pt-1">
-          <div className="flex flex-row justify-center-safe text-5xl text-white pb-5 h-16 opacity-35">
+          <div className="flex flex-col sm:flex-row justify-between gap-2 text-5xl text-white pb-5 h-16 opacity-35">
             <h1>My Projects </h1>
           </div>
           <div className="grid grid-cols-8 auto-rows-auto gap-3 py-1 w-full h-full">
@@ -610,7 +611,7 @@ function App() {
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Personal Branding Project 
+                  Personal Branding Project
                 </h2>
 
                 <FaAngleRight
@@ -671,7 +672,7 @@ function App() {
                   O'Source Clothing Line
                 </h2>
 
-                <FaAngleRight   onClick={() => setOsource(true)} className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight onClick={() => setOsource(true)} className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
 
               <Osource
@@ -696,15 +697,15 @@ function App() {
               {/* Title and arrow below */}
               <div className="flex items-center justify-between mt-4">
                 <h2 className="text-lg uppercase tracking-widest text-white font-Bebas">
-                  Marlins Basketball 
+                  Marlins Basketball
                 </h2>
 
-                <FaAngleRight 
-                onClick={() => setMarlins(true)}
-                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setMarlins(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-              
-               <Marlins
+
+              <Marlins
                 isOpen={openMarlins}
                 onClose={() => setMarlins(false)}
                 title="Marlins Basketball"
@@ -727,12 +728,12 @@ function App() {
                   Basketball Project
                 </h2>
 
-                <FaAngleRight 
-                onClick={() => setBasketball(true)}
-                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setBasketball(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-              
-               <Basketball
+
+              <Basketball
                 isOpen={openBasketball}
                 onClose={() => setBasketball(false)}
                 title="Basketball Project"
@@ -755,12 +756,12 @@ function App() {
                   Ecoglow
                 </h2>
 
-                <FaAngleRight 
-                onClick={() => setEcoglow(true)}
-                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setEcoglow(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-              
-               <Ecoglow
+
+              <Ecoglow
                 isOpen={openEcoglow}
                 onClose={() => setEcoglow(false)}
                 title="Ecoglow"
@@ -771,9 +772,9 @@ function App() {
               {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
-                  src="Kikoologo"
-                  alt="Kikoo Logo"
-                  className="w-full h-full object-cover"
+                  src={Compecover}
+                  alt="DKLT"
+                  className="w-full h-full object-cover opacity-40"
                 />
               </div>
 
@@ -783,12 +784,12 @@ function App() {
                   Competition Entry
                 </h2>
 
-              <FaAngleRight 
-                onClick={() => setCompe(true)}
-                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setCompe(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-              
-               <Compe
+
+              <Compe
                 isOpen={openCompe}
                 onClose={() => setCompe(false)}
                 title="DLTK Entry"
@@ -798,9 +799,9 @@ function App() {
               {/* Image on top */}
               <div className="w-full h-40 overflow-hidden rounded-2xl">
                 <img
-                  src="Kikoologo"
+                  src={Photohcover}
                   alt="Kikoo Logo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover opacity-50"
                 />
               </div>
 
@@ -810,15 +811,15 @@ function App() {
                   Random Photography
                 </h2>
 
-              <FaAngleRight 
-                onClick={() => setphotog(true)}
-                 className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
+                <FaAngleRight
+                  onClick={() => setPhotog(true)}
+                  className="text-white cursor-pointer hover:scale-110 transition-transform duration-300" />
               </div>
-              
-               <Photog
+
+              <Photog
                 isOpen={openPhotog}
                 onClose={() => setPhotog(false)}
-                title="DLTK Entry"
+                title="Random Photohraphy"
               />
             </div>
           </div>

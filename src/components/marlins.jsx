@@ -1,10 +1,17 @@
 import React from "react";
 import { MdCancel } from "react-icons/md";
-import offer from "../assets/images/Personal/offer.png";
-import org1 from "../assets/images/New folder/ORG/1.jpg";
-import org2 from "../assets/images/New folder/ORG/2.jpg";
-import org3 from "../assets/images/New folder/ORG/3.jpg";
-import org4 from "../assets/images/New folder/ORG/4.jpg";
+import offer from "../assets/images/New folder/MARLINS/marlinscover.jpg";
+import marlins1 from "../assets/images/New folder/MARLINS/1.jpg";
+import marlins2 from "../assets/images/New folder/MARLINS/2.jpg";
+import marlins3 from "../assets/images/New folder/MARLINS/3.jpg";
+import marlins4 from "../assets/images/New folder/MARLINS/4.jpg";
+import marlins5 from "../assets/images/New folder/MARLINS/5.jpg";
+import marlins6 from "../assets/images/New folder/MARLINS/6.jpg";
+import marlins7 from "../assets/images/New folder/MARLINS/7.jpg";
+import marlins8 from "../assets/images/New folder/MARLINS/8.jpg";
+import marlins9 from "../assets/images/New folder/MARLINS/9.jpg";
+import marlins10 from "../assets/images/New folder/MARLINS/marlins10.jpg";
+
 
 const marlins = ({ isOpen, onClose, title }) => {
   if (!isOpen) return null;
@@ -24,71 +31,54 @@ const marlins = ({ isOpen, onClose, title }) => {
           />
         </div>
 
-        {/* Content */}
-        <div className="p-2 flex flex-col items-center">
-          <div className="max-w-4xl  text-white/80  italic leading-relaxed text-lg pl-6 py-4 bg-white/5 backdrop-blur-sm rounded-r-lg">
-            <p>
-              When I started this role in our organization, it was my first time
-              handling such a responsibility. Despite this, I applied the skills
-              and knowledge I gained from my previous experiences.
-            </p>
-
-            <p className="mt-4">
-              My first step was to understand the organization’s branding to
-              ensure that the design aligns with its identity. Since our
-              department is technology-based, I incorporated the colors{" "}
-              <span className="text-green-400 font-semibold">green</span> and
-              <span className="text-zinc-300 font-semibold"> black</span>,
-              inspired by the user interface of a classic
-              <span className="text-green-400 font-semibold">
-                {" "}
-                Command Line Interface (CLI)
-              </span>
-              , to reflect a technical and modern aesthetic.
-            </p>
-          </div>
-          <div className="w-full max-w-5xl text-white pb-5">
+        <div className="flex flex-col p-2">
+          <div className="w-full max-w-5xl text-white pb-5 mx-auto text-center">
             <img
-              src={org1}
-              alt="org1"
-              className="w-full rounded-md object-cover"
+              src={offer}
+              alt="mockup"
+              className="w-full rounded-md object-cover h-80 opacity-50 opacity-40"
             />
-          </div>
 
-          <div className="w-full max-w-5xl text-white pb-5">
-            <img
-              src={org2}
-              alt="org1"
-              className="w-full rounded-md object-cover"
-            />
-          </div>
-
-          <div className="w-full max-w-5xl text-white pb-5">
-            <img
-              src={org3}
-              alt="org1"
-              className="w-full rounded-md object-cover"
-            />
-            <h6 className="italic mt-3 opacity-40 text-center">
-              For this department shirt, I incorporated design elements that
-              represent our department’s identity.
+            <h6 className="italic mt-3 opacity-50 max-w-3xl mx-auto">
+              The Marlins Basketball Team is an amateur team from Bulacan
+              that aimed to showcase their talent through social media. This
+              experience allowed me to apply my creative
+              skills and further develop my portfolio and professional growth.
             </h6>
           </div>
+          <div className="py-8">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 justify-center">
 
-          <div className="w-full max-w-5xl text-white pb-5">
-            <img
-              src={org4}
-              alt="org1"
-              className="w-full rounded-md object-cover"
-            />
-            <h6 className="italic mt-3 opacity-40 text-center">
-              Image 1: A visual representation of the services I offer.
-            </h6>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[marlins1, marlins2, marlins3, marlins4, marlins5, marlins6, marlins7, marlins8, marlins9, marlins10].map((img, index) => (
+                  <div
+                    key={index}
+                    className="overflow-hidden rounded-md group"
+                  >
+                    <img
+                      src={img}
+                      alt={`mockup-${index}`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                ))}
+              </div>
+              <h6 className="italic mt-3 text-center text-white opacity-50 max-w-3xl mx-auto">
+                This is one of our released shirt consist of two variation (white and black)
+              </h6>
+            </div>
           </div>
+
+
+
+
         </div>
+
+
       </div>
     </div>
   );
 };
 
 export default marlins;
+
